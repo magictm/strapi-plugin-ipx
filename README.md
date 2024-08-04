@@ -34,12 +34,12 @@ This plugin was originally created in https://github.com/strapi-community/strapi
 
 ## 📦 Features
 
-- **Image Processing**: Resize, crop, and optimize images on the fly.
-- **Cache**: Cache processed images for faster loading times.
-- **Custom Paths**: Define custom paths for ipx to listen on.
-- **Configuration**: Configure cache directory, cache duration, and more.
-- [] **TODO: Debug Mode**: Enable detailed logs for debugging purposes.
-- [] **TODO: Delete Cache**: Delete cache files on demand or automatically.
+-   **Image Processing**: Resize, crop, and optimize images on the fly.
+-   **Cache**: Cache processed images for faster loading times.
+-   **Custom Paths**: Define custom paths for ipx to listen on.
+-   **Configuration**: Configure cache directory, cache duration, and more.
+-   [] **TODO: Debug Mode**: Enable detailed logs for debugging purposes.
+-   [] **TODO: Delete Cache**: Delete cache files on demand or automatically.
 
 ## 💻 Install
 
@@ -106,7 +106,7 @@ npm run develop
 
 ## 🚀 Usage
 
-
+Same as https://github.com/unjs/ipx
 
 ## 🤝 Contributing
 
