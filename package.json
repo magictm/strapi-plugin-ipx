@@ -1,0 +1,104 @@
+{
+    "version": "0.1.0",
+    "type": "commonjs",
+    "exports": {
+        "./strapi-server": {
+            "types": "./dist/server/src/index.d.ts",
+            "source": "./server/src/index.ts",
+            "import": "./dist/server/index.mjs",
+            "require": "./dist/server/index.js",
+            "default": "./dist/server/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "dist",
+        "strapi-server.js"
+    ],
+    "scripts": {
+        "build": "strapi plugin:build --force",
+        "watch": "strapi plugin:watch",
+        "watch:link": "strapi plugin:watch:link",
+        "verify": "strapi plugin:verify",
+        "test:ts:back": "run -T tsc -p server/tsconfig.json",
+        "npm:publish": "npm publish --access public"
+    },
+    "dependencies": {
+        "@koa/router": "^12.0.1",
+        "@mobily/ts-belt": "^3.13.1",
+        "@strapi/design-system": "^1.19.0",
+        "@strapi/helper-plugin": "^4.25.4",
+        "@strapi/icons": "^1.19.0",
+        "etag": "^1.8.1",
+        "ipx": "^2.1.0",
+        "ohash": "^1.1.3",
+        "optional": "^0.1.4",
+        "qs": "^6.13.0",
+        "ufo": "^1.5.4"
+    },
+    "devDependencies": {
+        "@strapi/strapi": "^4.25.4",
+        "@strapi/typescript-utils": "^4.25.4",
+        "@types/koa__router": "^12.0.4",
+        "@types/node": "^22.1.0",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@types/react-router-dom": "^5.3.3",
+        "@types/styled-components": "^5.1.32",
+        "@types/uuid": "^10.0.0",
+        "prettier": "^3.3.3",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-intl": "^6.6.8",
+        "react-router-dom": "^5.3.4",
+        "styled-components": "^5.3.3",
+        "typescript": "^5.5.3",
+        "yup": "^1.4.0"
+    },
+    "peerDependencies": {
+        "@strapi/strapi": "^4.25.4",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^5.2.0",
+        "styled-components": "^5.2.1"
+    },
+    "strapi": {
+        "kind": "plugin",
+        "name": "magictm-ipx",
+        "displayName": "Ipx by MagicTM (m7rlin)",
+        "description": "Adds image optimization and manipulation capabilities using the IPX library."
+    },
+    "name": "@magictm/strapi-plugin-ipx",
+    "description": "Adds image optimization and manipulation capabilities using the IPX library.",
+    "license": "LGPL-2.1",
+    "author": "Marcin Stawowczyk m7rlin <merlin@magictm.com>",
+    "maintainers": [
+        {
+            "name": "Marcin Stawowczyk m7rlin <merlin@magictm.com>"
+        }
+    ],
+    "engines": {
+        "node": ">=18.x.x <=20.x.x",
+        "npm": ">=10.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/magictm/strapi-plugin-ipx.git"
+    },
+    "bugs": {
+        "url": "https://github.com/magictm/strapi-plugin-ipx/issues"
+    },
+    "homepage": "https://github.com/magictm/strapi-plugin-ipx#readme",
+    "keywords": [
+        "strapi",
+        "strapi v4",
+        "strapi plugin",
+        "strapi ipx",
+        "strapi image optimization",
+        "magictm",
+        "m7rlin",
+        "ipx",
+        "strapi community"
+    ]
+ 
+}

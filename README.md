@@ -9,16 +9,16 @@
 <p align="center">
 <a href='#'>
 </a>
-<a href="https://www.npmjs.com/package/@magictm/strapi-plugin-deep-populate" target="__blank"><img alt="NPM version" src="https://img.shields.io/npm/v/@magictm/strapi-plugin-deep-populate?flat&colorA=0e0a18&colorB=8c67ef"></a>
-<a href="https://www.npmjs.com/package/@magictm/strapi-plugin-deep-populate" target="__blank"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@magictm/strapi-plugin-deep-populate?flat&colorA=0e0a18&colorB=8c67ef"></a>
-<a href="https://github.com/magictm/strapi-plugin-deep-populate" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/magictm/strapi-plugin-deep-populate?flat&colorA=0e0a18&colorB=8c67ef"></a>
+<a href="https://www.npmjs.com/package/@magictm/strapi-plugin-ipx" target="__blank"><img alt="NPM version" src="https://img.shields.io/npm/v/@magictm/strapi-plugin-ipx?flat&colorA=0e0a18&colorB=8c67ef"></a>
+<a href="https://www.npmjs.com/package/@magictm/strapi-plugin-ipx" target="__blank"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@magictm/strapi-plugin-ipx?flat&colorA=0e0a18&colorB=8c67ef"></a>
+<a href="https://github.com/magictm/strapi-plugin-ipx" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/magictm/strapi-plugin-ipx?flat&colorA=0e0a18&colorB=8c67ef"></a>
 </p>
 
 <br/>
 
-<h1 align='left'>MagicTM · Deep Populate · Strapi Plugin</h1>
+<h1 align='left'>MagicTM · Ipx · Strapi Plugin</h1>
 
-🚀 The MagicTM Deep Populate Strapi Plugin simplifies deep population of content structures within your Strapi v4 applications. This plugin streamlines fetching nested data, making your API responses more comprehensive and developer-friendly.
+🚀 The MagicTM Ipx Strapi Plugin simplifies deep population of content structures within your Strapi v4 applications. This plugin streamlines fetching nested data, making your API responses more comprehensive and developer-friendly.
 
 🌐 Follow me: https://stawowczyk.me
 
@@ -37,7 +37,7 @@ This plugin is an extension of https://github.com/Barelydead/strapi-plugin-popul
 ### 1. Install the plugin
 
 ```bash
-npm install @magictm/strapi-plugin-deep-populate
+npm install @magictm/strapi-plugin-ipx
 ```
 
 ### 2. Enable the plugin
@@ -99,7 +99,7 @@ npm run develop
 
 ## 🚀 Usage
 
-The MagicTM Deep Populate plugin seamlessly integrates with your existing Strapi API. Here's how to use it:
+The MagicTM Ipx plugin seamlessly integrates with your existing Strapi API. Here's how to use it:
 
 ### Default Deep Population
 
@@ -139,7 +139,7 @@ You can comma-separate multiple fields to ignore. For instance, to exclude both 
 
 ## 🤝 Contributing
 
-Contributions to the MagicTM Deep Populate Strapi Plugin are always welcome! To contribute:
+Contributions to the MagicTM Ipx Strapi Plugin are always welcome! To contribute:
 
 -   **Fork** the repository.
 -   **Create** a new branch for your feature/bug fix.
@@ -162,5 +162,5 @@ We appreciate all sponsors! Please contact us if you're interested in sponsoring
 
 LGPL-2.1 License © 2024-PRESENT Marcin Stawowczyk (m7rlin)
 
-Thank you for using the MagicTM Deep Populate Strapi Plugin! Let me know if you have any other questions.
+Thank you for using the MagicTM Ipx Strapi Plugin! Let me know if you have any other questions.
 "# strapi-plugin-ipx" 
