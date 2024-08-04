@@ -30,7 +30,16 @@ Tested on Strapi v4.25.4.
 
 ## Motivation
 
-This plugin is an extension of https://github.com/Barelydead/strapi-plugin-populate-deep created by @Barelydead. Due to the lack of development of the plugin, I decided to extend the plugin with some features I need and share it with the community.
+This plugin was originally created in https://github.com/strapi-community/strapi-plugin-local-image-sharp. Due to lack of maintenance, I decided to create a new plugin with the same functionality and more features.
+
+## 📦 Features
+
+- **Image Processing**: Resize, crop, and optimize images on the fly.
+- **Cache**: Cache processed images for faster loading times.
+- **Custom Paths**: Define custom paths for ipx to listen on.
+- **Configuration**: Configure cache directory, cache duration, and more.
+- [] **TODO: Debug Mode**: Enable detailed logs for debugging purposes.
+- [] **TODO: Delete Cache**: Delete cache files on demand or automatically.
 
 ## 💻 Install
 
@@ -50,7 +59,7 @@ Add the following code snippet:
 #### Minimal configuration:
 
 ```ts
-'magictm-deep-populate': {
+'magictm-ipx': {
     enabled: true,
 }
 ```
@@ -58,24 +67,22 @@ Add the following code snippet:
 #### Advanced configuration
 
 ```ts
-'magictm-deep-populate': {
+'magictm-ipx': {
     enabled: true,
     config: {
-        minDepth: 5, // Minimum population depth
-        maxDepth: 5, // Maximum population depth
-        // Skip populating creator fields (e.g., created_by)
-        skipCreatorFields: false,
-        // Array of fields to always ignore.
-        // Must be type of ['relation', 'component', 'dynamiczone', 'media']
-        ignore: ['localizations', 'strapi_stage'],
         // Enable debug mode for detailed logs
         debug: false,
-        // Array of models where deep population is allowed e.g. ['api::page.page', 'api::post.post']
-        // If empty all models are allowed.
-        allowedModels: ['api::page.page', 'api::post.post'],
+        // Cache dir
+        cacheDir: '.my-cache',
+        // Cache duration in seconds
+        maxAge: 3600,
+        // Paths for ipx to listen on
+        paths: ['/uploads'],
     },
 }
 ```
+
+`cacheDir` can also be configured in `.env` file settings `STRAPI_PLUGIN_MAGICTM_IPX_CACHE_DIR`.
 
 #### Full example (typescript)
 
@@ -83,7 +90,7 @@ Add the following code snippet:
 export default () => ({
     // other plugins
 
-    'magictm-deep-populate': {
+    'magictm-ipx': {
         enabled: true,
     },
 })
@@ -99,43 +106,7 @@ npm run develop
 
 ## 🚀 Usage
 
-The MagicTM Ipx plugin seamlessly integrates with your existing Strapi API. Here's how to use it:
 
-### Default Deep Population
-
-To fetch content with deep population up to the configured default depth, simply append `?populate=deep` to your API endpoint:
-
-```
-/api/articles?populate=deep
-```
-
-### Custom Population Depth
-
-For finer control, specify the desired depth level numerically after the `deep` keyword:
-
-```
-/api/articles?populate=deep,10
-```
-
-This fetches articles with relations populated up to 10 levels deep, or the maximum depth set in the plugin configuration – whichever is lower. This ensures your API responses remain performant even with large datasets.
-
-> Please note! Using `?populate=deep,1` with depth of 1 will always return all relations with depth 1. Works same as `?populate=*`. `populateIgnore` will as well not work.
-
-### Excluding Specific Fields from Population
-
-Use the `populateIgnore` parameter to prevent specific fields or relations from being populated. This helps tailor your API responses by omitting unnecessary data.
-
-For example, to exclude the seo field from population:
-
-```
-/api/articles?populate=deep&populateIgnore=seo
-```
-
-You can comma-separate multiple fields to ignore. For instance, to exclude both the `seo` field and a relation named `relPosts`:
-
-```
-/api/articles?populate=deep&populateIgnore=seo,relPosts
-```
 
 ## 🤝 Contributing
 
@@ -163,4 +134,3 @@ We appreciate all sponsors! Please contact us if you're interested in sponsoring
 LGPL-2.1 License © 2024-PRESENT Marcin Stawowczyk (m7rlin)
 
 Thank you for using the MagicTM Ipx Strapi Plugin! Let me know if you have any other questions.
-"# strapi-plugin-ipx" 
