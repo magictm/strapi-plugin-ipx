@@ -8,7 +8,6 @@ import { createIPX, ipxFSStorage } from 'ipx'
 import { resolve } from 'path'
 import createMiddleware from './middlewares'
 
-
 const register = ({ strapi }: { strapi: Strapi }) => {
     // register phase
     const config = strapi.config.get('plugin.' + pluginId) as PluginConfig
@@ -16,7 +15,7 @@ const register = ({ strapi }: { strapi: Strapi }) => {
 
     const options = {
         config,
-        srcDir
+        srcDir,
     }
 
     strapi.log.info(`Using MagicTM ipx plugin`)
@@ -42,7 +41,6 @@ const register = ({ strapi }: { strapi: Strapi }) => {
     const router = new Router()
 
     config.paths.forEach((path) => {
-
         const ipx = createIPX({
             storage: ipxFSStorage({
                 dir: srcDir + path,
