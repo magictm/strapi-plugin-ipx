@@ -18,7 +18,7 @@
 
 <h1 align='left'>MagicTM · Ipx · Strapi Plugin</h1>
 
-🚀 The MagicTM Ipx Strapi Plugin simplifies deep population of content structures within your Strapi v4 applications. This plugin streamlines fetching nested data, making your API responses more comprehensive and developer-friendly.
+🖼️ The MagicTM Ipx Strapi Plugin High performance, secure and easy-to-use image optimizer for Strapi CMS.
 
 🌐 Follow me: https://stawowczyk.me
 
