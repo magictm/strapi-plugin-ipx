@@ -1,14 +1,14 @@
-import qs from 'qs'
-import { decode } from 'ufo'
+import getEtag from 'etag'
+import { createReadStream, existsSync } from 'fs'
+import { readFile, writeFile } from 'fs/promises'
 import { hash } from 'ohash'
 import { join } from 'path'
-import { createReadStream, existsSync } from 'fs'
-import { writeFile, readFile } from 'fs/promises'
-import getEtag from 'etag'
-import pluginId from '../pluginId'
+import qs from 'qs'
+import { decode } from 'ufo'
 
-function createMiddleware(ipx) {
-    const config = strapi.config.get('plugin.' + pluginId)
+function createMiddleware(ipx, options) {
+
+    const { config } = options
 
     return async function ipxMiddleware(ctx, next) {
         let path = null
@@ -118,7 +118,7 @@ function createMiddleware(ipx) {
         // Create request
         const img = ipx(id, modifiers, ctx.req.options)
         // console.log('img', img)
-        
+
         // Get image meta from source
         try {
             const src = await img.getSourceMeta()
