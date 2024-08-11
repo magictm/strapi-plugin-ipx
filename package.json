@@ -70,7 +70,7 @@
     },
     "name": "@magictm/strapi-plugin-ipx",
     "description": "Adds image optimization and manipulation capabilities using the IPX library.",
-    "license": "LGPL-2.1",
+    "license": "MIT",
     "author": "Marcin Stawowczyk m7rlin <merlin@magictm.com>",
     "maintainers": [
         {
